@@ -29,9 +29,9 @@ class About extends Component {
                         <h2>{this.state.userName}</h2>
                         <h2>{this.state.userAge}</h2>
                         <h2>{this.userEmail}</h2>
-                        <button onClick={this.changeName} className='btn btn-danger mb-3'>Change Name</button>
-                        <button onClick={this.changeAge} className='btn btn-danger mb-3'>Change Age</button>
-                        <button onClick={this.changeEmail} className='btn btn-danger mb-3'>Change Email</button>
+                        <button onClick={this.changeName} className='btn btn-danger mb-3 mx-2'>Change Name</button>
+                        <button onClick={this.changeAge} className='btn btn-danger mb-3 mx-2'>Change Age</button>
+                        <button onClick={this.changeEmail} className='btn btn-danger mb-3 mx-2'>Change Email</button>
                     </div>
                 </div>
             </>

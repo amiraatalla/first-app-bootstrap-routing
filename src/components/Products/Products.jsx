@@ -89,13 +89,18 @@ class Products extends Component {
             ]
     }
 
+    deleteProduct=(index)=>{
+     let products = this.state.Products
+     products.splice(index,1);
+     this.setState({products});   
+    }
     render() {
         return (
             <>
                 <div className="container">
                     <div className="row">
                         {this.state.Products.map((val, index) => {
-                            return <Product product={val} />
+                            return <Product index={val.id} deleteProduct={this.deleteProduct} key={val.id} product={val} />
                         })}
                     </div>
                 </div>
