@@ -6,31 +6,35 @@ class About extends Component {
         userAge: 20,
     }
     changeName = () => {
-        this.setState  ({
+        this.setState({
             userName: "Amira Reda"
-        
+
         })
     }
     changeAge = () => {
-        this.setState ({
+        this.setState({
             userAge: 25
         })
     }
     changeEmail = () => {
         this.userEmail = "amira.reda@gmail.com";
-          }
+    }
 
     render() {
         console.log(this.userName);
         return (
             <>
-            <h2>{this.state.userName}</h2>
-            <h2>{this.state.userAge}</h2>
-            <h2>{this.userEmail}</h2>
-            <button onClick={this.changeName} className='btn btn-danger'>Change Name</button>
-            <button onClick={this.changeAge}  className='btn btn-danger'>Change Age</button>
-            <button onClick={this.changeEmail}  className='btn btn-danger'>Change Email</button>
-           </>
+                <div className="text-center m-5">
+                    <div className="border my-3">
+                        <h2>{this.state.userName}</h2>
+                        <h2>{this.state.userAge}</h2>
+                        <h2>{this.userEmail}</h2>
+                        <button onClick={this.changeName} className='btn btn-danger mb-3'>Change Name</button>
+                        <button onClick={this.changeAge} className='btn btn-danger mb-3'>Change Age</button>
+                        <button onClick={this.changeEmail} className='btn btn-danger mb-3'>Change Email</button>
+                    </div>
+                </div>
+            </>
         );
     }
 }

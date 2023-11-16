@@ -11,13 +11,14 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Gallery from './components/Gallery/Gallery';
 import Footer from './components/Footer/Footer';
+import Products from './components/Products/Products';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
-    {/* <Home /> */}
     <About />
+    <Products />
     <Gallery />
     <Contact />
     <Footer />
