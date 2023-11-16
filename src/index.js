@@ -1,27 +1,35 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Navbar from './components/Navbar/Navbar';
-// import Home from './components/Home/Home';
+import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Gallery from './components/Gallery/Gallery';
-import Footer from './components/Footer/Footer';
 import Products from './components/Products/Products';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import SystemLayout from './Layouts/SystemLayout/SystemLayout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const routes = createBrowserRouter([
+  {
+    path: '/', element: <SystemLayout />,
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/home', element: <Home /> },
+      { path: '/about', element: <About /> },
+      { path: '/products', element: <Products /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '/gallery', element: <Gallery /> },
+    ]
+  }
+])
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <About />
-    <Products />
-    <Gallery />
-    <Contact />
-    <Footer />
+    <RouterProvider router={routes} />
   </React.StrictMode>
 );
 
